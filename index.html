@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap" rel="stylesheet"> 
+  <title>Frontend Mentor | Product preview card component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    body{
+      background-color: hsl(30, 38%, 92%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100vw;
+      flex-direction: column;
+      
+    }
+    main{
+      display: flex;
+      /* justify-content: space-between; */
+      align-items: center;
+      width: 650px;
+      background-color: white;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    
+    h1{
+     text-transform: uppercase;
+     font-weight: 300;
+     font-family: 'Montserrat', sans-serif;
+     font-size: 12px;
+     letter-spacing: 6px;
+     margin: 10px 0;
+     color: hsl(228, 12%, 48%);
+    }
+
+    .img-div{
+      height: 100%;
+      width: 100%;
+    }
+
+    .img-div img{
+      width: 100%;
+      height: 100%;
+    }
+
+    section{
+      padding: 20px 15px;
+    }
+
+   .perfume-title{
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 38px;
+    color: hsl(212, 21%, 14%);
+    font-family: 'Fraunces', serif;
+   }
+   .mobile-title{
+    display: none;
+   }
+   .desktop-title{
+    display: block;
+   }
+   .perfume-desc{
+    color: hsl(228, 12%, 48%);
+
+    font-family: 'Montserrat', sans-serif;
+    line-height: 23px;
+    margin: 20px 0;
+   }
+
+   .perfume-amnt{
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    font-family: 'Fraunces', serif;
+   }
+
+   .amnt-new{
+    margin-right: 15px;
+    font-size: 35px;
+    color: hsl(158, 36%, 37%);
+    font-weight: bold;
+   }
+
+   .amnt-old{
+    text-decoration: line-through;
+    color: hsl(228, 12%, 48%);
+    font-size: 12px;
+   }
+
+   button{
+    display: block;
+    border: none;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 8px;
+    color: #fff;
+    background-color: hsl(158, 36%, 37%);
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+   }
+
+   .svg-size{
+      width: 25px;
+      height: 25px;
+      display: inline-block;
+      margin-right: 10px;
+   }
+
+   @media screen and (max-width:650px){
+    body{
+      height: auto;
+      width: auto;
+      padding: 20px 15px;
+    }
+    main{
+      flex-direction: column;
+      width: auto;
+      border-radius: 10px;
+      overflow: hidden;
+
+    }
+    button{
+      padding: 15px;
+    }
+    .perfume-title{
+      font-size: 30px;
+    }
+   .mobile-title{
+    display: block;
+   }
+   .desktop-title{
+    display: none;
+   }
+   }
+  </style>
+</head>
+<body>
+
+ <main>
+  <div class="img-div">
+    <picture>
+      <source media="(min-width:650px)" srcset="./images/image-product-desktop.jpg">
+      <img src="./images/image-product-mobile.jpg" alt="perfume">
+    </picture> 
+  </div>
+  <section>
+   
+    <h1>
+      Perfume
+    </h1>
+    <p class="perfume-title mobile-title">
+      Gabrielle  Essence Eau De Parfum
+    </p>
+    <p class="perfume-title desktop-title">
+      Gabrielle <br /> Essence Eau De <br /> Parfum
+    </p>
+  
+     <p class="perfume-desc"> 
+       A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+    Perfumer-Creator for the House of CHANEL.
+     </p>
+     <p class="perfume-amnt">
+       <span class="amnt-new">
+        $149.99
+       </span>
+       <span class="amnt-old">
+        $169.99
+       </span>
+     </p>
+  
+     <button>
+      <svg class="svg-size" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+      <span>Add to Cart</span>
+     </button>
+   </section>
+    
+ </main>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Chukwu Paschal</a>.
+  </div>
+</body>
+</html>
