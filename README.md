@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/Haybuka/test-perfume-design.git)
-- Live Site URL: [Add live site URL here](https://prodDez.com)
+- Live Site URL: [Github pages](https://haybuka.github.io/test-perfume-design/)
 
 
 
